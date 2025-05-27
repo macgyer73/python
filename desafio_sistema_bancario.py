@@ -81,7 +81,7 @@ class SistemaBancario:
             return
         
         for cpf, conta in self.contas.items():
-            print(f"CPF: {cpf} | Conta: {conta['conta']} | Nome: {conta['dados_cliente']['nome']}")
+            print(f"CPF: {cpf} | Conta: {conta['conta']} | Nome: {conta['dados_cliente']['nome']} | Saldo={conta['saldo']}" )
     
     def selecionar_conta(self):
         """Seleciona uma conta para operações"""
@@ -180,6 +180,7 @@ class SistemaBancario:
         print(f"Telefone: {dados['telefone']}")
         print(f"Endereço: {dados['endereco']}")
         print(f"Número da conta: {conta['conta']}")
+        print(f"Saldo = {conta['saldo']}")
         return dados
     
     def depositar(self):
